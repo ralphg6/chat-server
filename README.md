@@ -3,3 +3,5 @@
 
 Trabalho de Rede de Computadores
 
+Servidor responsável pelo controle de presença, canais de mensagens, manutenção dos grupos, desenvolvido em [Go](https://golang.org/).
+
