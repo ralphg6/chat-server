@@ -13,7 +13,7 @@ type Server struct {
 	Groups map[string]Group
 }
 
-func hearhtBit(w http.ResponseWriter, r *http.Request) {
+func handlerOK(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "OK")
 }
 
@@ -36,7 +36,7 @@ func handlerTest(w http.ResponseWriter, r *http.Request) {
 }
 
 func Serve() {
-	http.HandleFunc("/", hearhtBit)
+	http.HandleFunc("/", handlerOK)
 	http.HandleFunc("/pooling", handlerPooling)
 	http.HandleFunc("/test", handlerTest)
 	http.ListenAndServe(":8080", nil)
